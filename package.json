@@ -1,0 +1,41 @@
+{
+  "name": "team_krushit",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "check-node-version --node '>= 6.7.0' && webpack",
+    "build-watch": "check-node-version --node '>= 6.7.0' && webpack -w",
+    "start": "check-node-version --node '>= 6.7.0' && node server/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NEIA20/team_krushit"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NEIA20/team_krushit"
+  },
+  "engines": {
+    "node": "6.7.0"
+  },
+  "homepage": "https://github.com/NEIA20/team_krushit",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "check-node-version": "^1.1.2",
+    "cookie-session": "^2.0.0-alpha.1",
+    "express": "^4.14.0",
+    "nodemon": "^1.10.2",
+    "path": "^0.12.7",
+    "sequelize": "^3.24.6",
+    "volleyball": "^1.4.1",
+    "webpack": "^1.13.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "supertest": "^2.0.1",
+    "supertest-as-promised": "^4.0.1"
+  }
+}
