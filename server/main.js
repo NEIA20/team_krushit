@@ -1,6 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const {resolve} = require('path')
+const screenshot = require('desktop-screenshot');
+const request = require('request');
+
+
 
 const app = express()
   // Logging middleware (dev only)
@@ -39,3 +43,14 @@ module.exports = app
 //   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 // });
 
+
+screenshot("hackathon.png", function(error, complete) {
+  if(error)
+    console.log("Screenshot failed", error);
+  else {
+    console.log("Screenshot succeeded");
+    console.log("COMPLETE", complete)
+  }
+});
+
+request.post('https://api.projectoxford.ai/emotion/v1.0/recognize')
